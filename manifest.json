@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "My Chrome Extension",
+  "name": "My Chrome Timer Extension",
   "version": "1.0",
-  "description": "Bla bla bla",
-  "permissions": ["activeTab"],
+  "description": "A chrome timer extension",
+  "permissions": ["activeTab", "scripting"],
   "action": {
     "default_popup": "src/popup/popup.html",
     "default_icon": {
