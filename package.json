@@ -1,15 +1,20 @@
 {
-  "name": "exercise",
-  "version": "0.0.1",
-  "private": true,
+  "name": "chrome-extension-typescript",
+  "version": "1.0.0",
+  "description": "A boilerplate for a chrome extension with typescript",
   "scripts": {
-    "start": "node_modules/ts-node/dist/bin.js app.ts"
+    "watch": "webpack --config webpack/webpack.dev.js --watch",
+    "build": "webpack --config webpack/webpack.prod.js"
   },
   "dependencies": {
     "request": "^2.88.2",
     "request-promise": "^4.2.6"
   },
   "devDependencies": {
+    "@types/chrome": "0.0.158",
+    "copy-webpack-plugin": "^9.0.1",
+    "glob": "^7.1.6",
+    "webpack-merge": "^5.0.0",
     "@types/node": "^10.14.15",
     "ts-loader": "^9.4.4",
     "ts-node": "^10.9.1",

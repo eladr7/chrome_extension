@@ -1,16 +1,17 @@
 {
   "compilerOptions": {
-    "sourceMap": true,
-    "alwaysStrict": true,
-    "noImplicitThis": true,
-    "noImplicitReturns": true,
-    "strictFunctionTypes": true,
+    "sourceMap": false,
     "target": "ES6",
+    "esModuleInterop": true,
     "module": "ESNext",
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "moduleResolution": "node",
-    "strict": true
+    "outDir": "dist/js",
+    "noEmitOnError": true,
+    "rootDir": "src",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ]
   },
   "include": [
     "src/**/*.ts"
