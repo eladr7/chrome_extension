@@ -1,13 +1,13 @@
 const timeElement = document.getElementById("time");
 const timer = document.getElementById("timer");
 const userName = document.getElementById("name");
-userName!.textContent = "Your name is: blabla";
+userName!.textContent = "Your name is: hihihi";
 
 document.addEventListener("DOMContentLoaded", function () {
   const timeElement = document.getElementById("time");
   const timer = document.getElementById("timer");
   const userName = document.getElementById("name");
-  userName!.textContent = "Your name is: blabla";
+  userName!.textContent = "Your name is: hihihi";
 });
 
 // const updateTimeElements = () => {
