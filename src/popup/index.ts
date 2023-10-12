@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const timer = document.getElementById("timer");
   const userName = document.getElementById("name");
   userName!.textContent = "Your name is: hihihi";
+  userName!.classList.add("text-primary");
 });
 
 // const updateTimeElements = () => {
