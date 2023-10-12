@@ -31,7 +31,8 @@ module.exports = {
       },
       // CSS/PostCSS loader
       {
-        test: /\.css$/,
+        test: /\.css$/i,
+        include: path.resolve(__dirname, "../public"),
         use: ["style-loader", "css-loader", "postcss-loader"],
       },
     ],

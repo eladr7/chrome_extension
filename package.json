@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "A boilerplate for a chrome extension with typescript",
   "scripts": {
-    "watch": "webpack --config webpack/webpack.dev.js --watch",
+    "watch:webpack": "webpack --config webpack/webpack.dev.js --watch",
+    "watch:tailwind:popup": "sleep 1 && npx tailwindcss -i ./public/popup.css -o ./dist/popup.css --watch",
+    "watch:tailwind:options": "sleep 1 && npx tailwindcss -i ./public/options.css -o ./dist/options.css --watch",
+    "watch": "concurrently \"npm:watch:webpack\" \"npm:watch:tailwind:popup\" \"npm:watch:tailwind:options\"",
     "build": "webpack --config webpack/webpack.prod.js"
   },
   "dependencies": {
@@ -14,6 +17,7 @@
     "@types/chrome": "0.0.158",
     "@types/node": "^10.14.15",
     "autoprefixer": "^10.4.16",
+    "concurrently": "^8.2.1",
     "copy-webpack-plugin": "^9.0.1",
     "glob": "^7.1.6",
     "postcss": "^8.4.31",
