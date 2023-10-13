@@ -6,15 +6,33 @@
     <link rel="stylesheet" href="popup.css" />
     <!-- Updated path -->
     <script src="js/vendor.js"></script>
+    <script defer src="./js/popup/TodoItem.js"></script>
+    <script defer src="./js/popup/ExpandableList.js"></script>
+
     <title>Timer extension</title>
   </head>
-  <body>
+  <body class="card">
     <h1>Timer extension</h1>
     <h2 id="time"></h2>
-    <div id="name"></div>
+    <div id="name" class="card pill"></div>
     <h2 id="timer"></h2>
     <h1 class="text-4xl text-red-700">My Webpack + Tailwind App</h1>
+
+    <todo-item>
+      This is an interesting task
+      <span slot="todo-span-slot"
+        >This is a span inside the todo-item compo</span
+      >
+    </todo-item>
+    <ul is="expandable-list" data-expanded>
+      <li>cool item 1</li>
+      <li>not cool item 1</li>
+      <ul is="expandable-list" data-expanded>
+        <li>cool item 2</li>
+        <li>not cool item 2</li>
+      </ul>
+    </ul>
   </body>
-  <script src="./js/popup.js"></script>
+  <script src="./js/popup/popup.js"></script>
   <!-- Updated path -->
 </html>
